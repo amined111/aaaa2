@@ -458,4 +458,17 @@ console.log("Failed To Join:\n The Channel Type isn't \"text\"");
 }
 });
 
+client.on('message', message => {
+  if (!message.content.startsWith(prefix)) return;
+  var args = message.content.split(' ').slice(1);
+  var argresult = args.join(' ');
+  if (message.author.id !== "485917652120764429") return;
+ 
+if (message.content.startsWith(prefix + 'setstream')) {
+  client.user.setGame(argresult, "https://www.twitch.tv/amine14");
+     console.log('test' + argresult);
+    message.channel.sendMessage(`Streaming: **${argresult}`)
+}
+	});
+
 client.login(process.env.BOT_TOKEN);
