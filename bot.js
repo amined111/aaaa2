@@ -450,7 +450,10 @@ client.on('message', message => {
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
   if (message.author.id !== "485917652120764429") return;
-	
+if (message.content.startsWith(PREFIX + 'setavatar')) {
+  client.user.setAvatar(argresult);
+   message.channel.sendMessage(Avatar Changed Successfully To ${argresult}**);
+}	
 if (message.content.startsWith(prefix + 'setstream')) {
   client.user.setGame(argresult, "https://www.twitch.tv/taino11");
      console.log('test' + argresult);
