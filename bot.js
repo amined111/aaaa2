@@ -451,7 +451,7 @@ client.on('message', message => {
   var argresult = args.join(' ');
   if (message.author.id !== "485917652120764429") return;
 	
- if (message.content.startsWith(prefix + 'اسم')) {
+ if (message.content.startsWith(prefix + 'name')) {
 client.user.setUsername(argresult).then
     message.channel.sendMessage(${argresult} : تم تغيير أسم البوت إلى)
 return message.reply("**لا يمكنك تغيير الاسم يجب عليك الانتظآر لمدة ساعتين . **");
