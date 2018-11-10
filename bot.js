@@ -472,7 +472,7 @@ console.log("Failed To Join:\n The Channel Type isn't \"text\"");
 }
 });
 
-const adminprefix = "M";
+const adminprefix = ".";
 const devs = ['440271644754444288','485917652120764429'];
 client.on('message', message => {
   var argresult = message.content.split(`).slice(1).join(' ');
