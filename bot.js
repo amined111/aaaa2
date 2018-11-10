@@ -450,7 +450,12 @@ client.on('message', message => {
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
   if (message.author.id !== "485917652120764429") return;
- 
+	
+ if (message.content.startsWith(prefix + 'اسم')) {
+client.user.setUsername(argresult).then
+    message.channel.sendMessage(${argresult} : تم تغيير أسم البوت إلى)
+return message.reply("**لا يمكنك تغيير الاسم يجب عليك الانتظآر لمدة ساعتين . **");
+}
 if (message.content.startsWith(prefix + 'setstream')) {
   client.user.setGame(argresult, "https://www.twitch.tv/taino11");
      console.log('test' + argresult);
